@@ -1,0 +1,27 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] vet = Console.ReadLine().Split(' ');
+            int duracao;
+            int inicio = int.Parse(vet[0]);
+            int fim = int.Parse(vet[1]);
+
+            if (fim>inicio)
+            {
+                duracao = fim - inicio;
+            }
+            else
+            {
+                fim += 24;
+                duracao = fim - inicio;
+            }
+            Console.WriteLine("O JOGO DUROU " + duracao + " HORA(S)");
+        }
+    }
+}
