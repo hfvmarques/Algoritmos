@@ -1,0 +1,35 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int codPeca1, nPeca1, codPeca2, nPeca2;
+            double vUnPeca1, vUnPeca2, total;
+
+            string[] peca1 = Console.ReadLine().Split(' ');
+            string[] peca2 = Console.ReadLine().Split(' ');
+
+            codPeca1 = int.Parse(peca1[0]);
+            nPeca1 = int.Parse(peca1[1]);
+            vUnPeca1 = double.Parse(peca1[2], CultureInfo.InvariantCulture);
+
+            codPeca2 = int.Parse(peca2[0]);
+            nPeca2 = int.Parse(peca2[1]);
+            vUnPeca2 = double.Parse(peca2[2], CultureInfo.InvariantCulture);
+
+            total = nPeca1 * vUnPeca1 + nPeca2 * vUnPeca2;
+
+            Console.WriteLine("VALOR A PAGAR: R$ "+total.ToString("F2", CultureInfo.InvariantCulture));
+
+
+             
+
+
+
+        }
+    }
+}
