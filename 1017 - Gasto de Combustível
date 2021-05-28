@@ -1,0 +1,22 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int tempo, velMedia;
+            double combustivel;
+
+            tempo = int.Parse(Console.ReadLine());
+            velMedia = int.Parse(Console.ReadLine());
+
+            combustivel = tempo * velMedia / (double) 12;
+
+            Console.WriteLine(combustivel.ToString("F3", CultureInfo.InvariantCulture));
+
+        }
+    }
+}
