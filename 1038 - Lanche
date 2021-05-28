@@ -1,0 +1,41 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int cod, qnt;
+            double preco, total;
+
+            string[] vet = Console.ReadLine().Split(' ');
+            cod = int.Parse(vet[0]);
+            qnt = int.Parse(vet[1]);
+
+            if (cod == 1)
+            {
+                preco = 4.00;
+            }
+            else if (cod == 2)
+            {
+                preco = 4.50;
+            }
+            else if (cod == 3)
+            {
+                preco = 5.00;
+            }
+            else if (cod == 4)
+            {
+                preco = 2.00;
+            }
+            else
+            {
+                preco = 1.50;
+            }
+            total = preco * qnt;
+            Console.WriteLine("Total: R$ " + total.ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
