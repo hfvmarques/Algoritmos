@@ -1,0 +1,68 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string vertebra, tipo, alimentacao;
+
+            vertebra = Console.ReadLine();
+            tipo = Console.ReadLine();
+            alimentacao = Console.ReadLine();
+
+            if (vertebra == "vertebrado")
+            {
+                if (tipo == "ave")
+                {
+                    if (alimentacao == "carnivoro")
+                    {
+                        Console.WriteLine("aguia");
+                    }
+                    else
+                    {
+                        Console.WriteLine("pomba");
+                    }
+                }
+                else
+                {
+                    if (alimentacao == "onivoro")
+                    {
+                        Console.WriteLine("homem");
+                    }
+                    else
+                    {
+                        Console.WriteLine("vaca");
+                    }
+                }
+            }
+            else
+            {
+                if (tipo == "inseto")
+                {
+                    if (alimentacao == "hematofago")
+                    {
+                        Console.WriteLine("pulga");
+                    }
+                    else
+                    {
+                        Console.WriteLine("lagarta");
+                    }
+                }
+                else
+                {
+                    if (alimentacao == "hematofago")
+                    {
+                        Console.WriteLine("sanguessuga");
+                    }
+                    else
+                    {
+                        Console.WriteLine("minhoca");
+                    }
+                }
+            }
+        }
+    }
+}
