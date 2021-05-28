@@ -1,0 +1,44 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int dia1, dia2, h1, h2, m1, m2, s1, s2, inicio, final, duracao, dias, horas, minutos, segundos, resto;
+
+            string[] vet1 = Console.ReadLine().Split(' ');
+            string[] vet2 = Console.ReadLine().Split(' ');
+            string[] vet3 = Console.ReadLine().Split(' ');
+            string[] vet4 = Console.ReadLine().Split(' ');
+
+            dia1 = int.Parse(vet1[1]);
+            h1 = int.Parse(vet2[0]);
+            m1 = int.Parse(vet2[2]);
+            s1 = int.Parse(vet2[4]);
+
+            dia2 = int.Parse(vet3[1]);
+            h2 = int.Parse(vet4[0]);
+            m2 = int.Parse(vet4[2]);
+            s2 = int.Parse(vet4[4]);
+
+            inicio = s1 + m1 * 60 + h1 * 60 * 60 + dia1 * 24 * 60 * 60;
+            final = s2 + m2 * 60 + h2 * 60 * 60 + dia2 * 24 * 60 * 60;
+
+            duracao = final - inicio;
+            dias = duracao / (24*60*60);
+            resto = duracao % (24*60*60);
+            horas = resto / (60*60);
+            resto = resto % (60*60);
+            minutos = resto / 60;
+            segundos = resto % 60;
+
+            Console.WriteLine(dias + " dia(s)");
+            Console.WriteLine(horas + " hora(s)");
+            Console.WriteLine(minutos + " minuto(s)");
+            Console.WriteLine(segundos + " segundo(s)");
+        }
+    }
+}
