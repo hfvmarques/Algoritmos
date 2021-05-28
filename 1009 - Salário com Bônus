@@ -1,0 +1,20 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string nome;
+            double salario, vendas;
+
+            nome = Console.ReadLine();
+            salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            vendas = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.WriteLine("TOTAL = R$ " + (salario + vendas * .15).ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
