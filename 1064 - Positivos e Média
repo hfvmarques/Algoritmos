@@ -1,0 +1,53 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double D = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double E = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double F = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double soma = 0;
+            int contador = 0;
+
+            if (A > 0)
+            {
+                contador += 1;
+                soma += A;
+            }
+            if (B > 0)
+            {
+                contador += 1;
+                soma += B;
+            }
+            if (C > 0)
+            {
+                contador += 1;
+                soma += C;
+            }
+            if (D > 0)
+            {
+                contador += 1;
+                soma += D;
+            }
+            if (E > 0)
+            {
+                contador += 1;
+                soma += E;
+            }
+            if (F > 0)
+            {
+                contador += 1;
+                soma += F;
+            }
+            Console.WriteLine(contador + " valores positivos");
+            Console.WriteLine((soma / contador).ToString("F1", CultureInfo.InvariantCulture));
+        }
+    }
+}
