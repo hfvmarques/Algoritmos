@@ -1,0 +1,38 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double reajuste;
+
+            if (salario <= 400.00)
+            {
+                reajuste = .15;
+            }
+            else if (salario <= 800.00)
+            {
+                reajuste = .12;
+            }
+            else if (salario <= 1200.00)
+            {
+                reajuste = .10;
+            }
+            else if (salario <= 2000.00)
+            {
+                reajuste = .07;
+            }
+            else
+            {
+                reajuste = .04;
+            }
+            Console.WriteLine("Novo salario: " + (salario+salario*reajuste).ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Reajuste ganho: " + (salario * reajuste).ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Em percentual: " + (reajuste * 100).ToString("F0", CultureInfo.InvariantCulture) + " %");
+        }
+    }
+}
