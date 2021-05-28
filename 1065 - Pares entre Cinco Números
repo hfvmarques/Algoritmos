@@ -1,0 +1,41 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A, B, C, D, E, contador;
+            A = int.Parse(Console.ReadLine());
+            B = int.Parse(Console.ReadLine());
+            C = int.Parse(Console.ReadLine());
+            D = int.Parse(Console.ReadLine());
+            E = int.Parse(Console.ReadLine());
+            contador = 0;
+
+            if (A % 2 == 0)
+            {
+                contador += 1;
+            }
+            if (B % 2 == 0)
+            {
+                contador += 1;
+            }
+            if (C % 2 == 0)
+            {
+                contador += 1;
+            }
+            if (D % 2 == 0)
+            {
+                contador += 1;
+            }
+            if (E % 2 == 0)
+            {
+                contador += 1;
+            }
+            Console.WriteLine(contador + " valores pares");
+        }
+    }
+}
