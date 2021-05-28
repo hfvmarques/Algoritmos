@@ -1,0 +1,19 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double n1, n2, media;
+
+            n1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            n2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            
+            media=n1*3.5/11+n2*7.5 / 11;
+            Console.WriteLine("MEDIA = " + media.ToString("F5", CultureInfo.InvariantCulture));
+        }
+    }
+}
