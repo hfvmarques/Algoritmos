@@ -1,0 +1,32 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int idade = int.Parse(Console.ReadLine());
+            int quantidade = 0;
+            int total = 0;
+            double media;
+
+            while (idade >= 0)
+            {
+                quantidade += 1;
+                total += idade;
+                idade = int.Parse(Console.ReadLine());
+            }
+            if (quantidade == 0)
+            {
+                Console.WriteLine("Impossivel calcular");
+            }
+            else
+            {
+                media = (double)total / quantidade;
+                Console.WriteLine(media.ToString("F2", CultureInfo.InvariantCulture));
+            }
+        }
+    }
+}
