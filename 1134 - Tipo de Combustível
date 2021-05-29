@@ -1,0 +1,39 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int combustivel, alcool, gasolina, diesel;
+            combustivel = int.Parse(Console.ReadLine());
+            alcool = 0;
+            gasolina = 0;
+            diesel = 0;
+
+            while (combustivel != 4)
+            {
+
+                switch (combustivel)
+                {
+                    case 1:
+                        alcool += 1;
+                        break;
+                    case 2:
+                        gasolina += 1;
+                        break;
+                    case 3:
+                        diesel += 1;
+                        break;
+                }
+                combustivel = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("MUITO OBRIGADO");
+            Console.WriteLine("Alcool: " + alcool);
+            Console.WriteLine("Gasolina: " + gasolina);
+            Console.WriteLine("Diesel: " + diesel);
+        }
+    }
+}
