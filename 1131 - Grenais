@@ -1,0 +1,60 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int condicao = 1;
+            int inter, gremio, vitInter, vitGremio, empates, contador;
+            vitInter = 0;
+            vitGremio = 0;
+            empates = 0;
+            contador = 0;
+
+            while (condicao == 1)
+            {
+                string[] vet = Console.ReadLine().Split(' ');
+                inter = int.Parse(vet[0]);
+                gremio = int.Parse(vet[1]);
+
+                if (inter > gremio)
+                {
+                    vitInter += 1;
+                }
+                else if (inter < gremio)
+                {
+                    vitGremio += 1;
+                }
+                else
+                {
+                    empates += 1;
+                }
+
+                contador += 1;
+
+                Console.WriteLine("Novo grenal (1-sim 2-nao)");
+                condicao = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine(contador + " grenais");
+            Console.WriteLine("Inter:" + vitInter);
+            Console.WriteLine("Gremio:" + vitGremio);
+            Console.WriteLine("Empates:" + empates);
+
+            if (vitInter > vitGremio)
+            {
+                Console.WriteLine("Inter venceu mais");
+            }
+            else if (vitInter < vitGremio)
+            {
+                Console.WriteLine("Gremio venceu mais");
+            }
+            else
+            {
+                Console.WriteLine("Nao houve vencedor");
+            }
+        }
+    }
+}
