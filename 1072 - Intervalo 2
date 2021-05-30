@@ -1,0 +1,29 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica {
+    class Program     {
+        static void Main(string[] args)
+        {
+            int N = int.Parse(Console.ReadLine());
+            int numero, nIn, nOut;
+            nIn = 0;
+            nOut = 0;
+
+            for (int i = 1; i <= N; i++)
+            {
+                numero = int.Parse(Console.ReadLine());
+                if (numero < 10 || numero > 20)
+                {
+                    nOut++;
+                }
+                else
+                {
+                    nIn++;
+                }
+            }
+            Console.WriteLine(nIn + " in");
+            Console.WriteLine(nOut + " out");
+        }
+    }
+}
