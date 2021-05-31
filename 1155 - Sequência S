@@ -1,0 +1,17 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica {
+    class Program     {
+        static void Main(string[] args)
+        {
+            double S = 0.0;
+
+            for (int i=1; i <= 100; i++)
+            {
+                S += 1.0 / (double)i;
+            }
+            Console.WriteLine(S.ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
