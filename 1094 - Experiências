@@ -1,0 +1,46 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica {
+    class Program     {
+        static void Main(string[] args)
+        {
+            int N = int.Parse(Console.ReadLine());
+            int cobaias, rato, sapo, coelho, total;
+            rato = 0;
+            sapo = 0;
+            coelho = 0;
+            char animal;
+            
+            for(int i = 1; i <= N; i++)
+            {
+                string[] vet = Console.ReadLine().Split(' ');
+                cobaias = int.Parse(vet[0]);
+                animal = char.Parse(vet[1]);
+                if (animal == 'R')
+                {
+                    rato += cobaias;
+                }
+                else if (animal == 'S')
+                {
+                    sapo += cobaias;
+                }
+                else if (animal == 'C')
+                {
+                    coelho += cobaias;
+                }
+            }
+            total = rato + sapo + coelho;
+            Console.WriteLine("Total: " + total + " cobaias");
+            Console.WriteLine("Total de coelhos: " + coelho);
+            Console.WriteLine("Total de ratos: " + rato);
+            Console.WriteLine("Total de sapos: " + sapo);
+            Console.WriteLine("Percentual de coelhos: " + (100.00 * (double)coelho / (double)total).ToString("F2", 
+                CultureInfo.InvariantCulture)+" %");
+            Console.WriteLine("Percentual de ratos: " + (100.00 * (double)rato / (double)total).ToString("F2", 
+                CultureInfo.InvariantCulture) + " %");
+            Console.WriteLine("Percentual de sapos: " + (100.00*(double)sapo / (double)total).ToString("F2", 
+                CultureInfo.InvariantCulture) + " %");
+        }
+    }
+}
