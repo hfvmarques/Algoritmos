@@ -1,0 +1,28 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica {
+    class Program     {
+        static void Main(string[] args)
+        {
+            int X, Y, N = int.Parse(Console.ReadLine());
+
+
+            for (int i = 1; i <= N; i++)
+            {
+                string[] vet = Console.ReadLine().Split(' ');
+                X = int.Parse(vet[0]);
+                Y = int.Parse(vet[1]);
+
+                if (Y == 0)
+                {
+                    Console.WriteLine("divisao impossivel");
+                }
+                else
+                {
+                    Console.WriteLine(((double)X / (double)Y).ToString("F1", CultureInfo.InvariantCulture));
+                }
+            }
+        }
+    }
+}
