@@ -1,0 +1,29 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int X, Y;
+
+            string[] vet = Console.ReadLine().Split(' ');
+            X = int.Parse(vet[0]);
+            Y = int.Parse(vet[1]);
+            
+            for (int i = 1; i <= Y; i++)
+            {
+                if (i % X == 0)
+                {
+                    Console.WriteLine(i);
+                }
+                else
+                {
+                    Console.Write(i + " ");
+                }
+            }
+        }
+    }
+}
