@@ -1,0 +1,27 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica {
+    class Program     {
+        static void Main(string[] args)
+        {
+            int N = int.Parse(Console.ReadLine());
+            int j = 0, k = 1, l = 0;          
+
+            for (int i = 1; i <= N; i++) 
+            {                
+                if (i == N)
+                {
+                    Console.WriteLine(j);
+                }
+                else
+                {
+                    Console.Write(j + " ");
+                    l = j;
+                    j += k;
+                    k = l;
+                }
+            }
+        }
+    }
+}
