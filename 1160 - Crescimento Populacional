@@ -1,0 +1,38 @@
+using System;
+using System.Globalization;
+
+namespace Primeiro___Curso_de_Lógica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int contador, T = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= T; i++)
+            {
+                string[] vet = Console.ReadLine().Split(' ');
+                int PA = int.Parse(vet[0]);
+                int PB = int.Parse(vet[1]);
+                double G1 = double.Parse(vet[2], CultureInfo.InvariantCulture);
+                double G2 = double.Parse(vet[3], CultureInfo.InvariantCulture);
+                contador = 0;
+                do
+                {
+                    PA += (int)(PA*G1/100);
+                    PB += (int)(PB*G2/100);
+                    contador++;
+                } while (PA <= PB);
+
+                if (contador > 100)
+                {
+                    Console.WriteLine("Mais de 1 seculo.");
+                }
+                else
+                {
+                    Console.WriteLine(contador + " anos.");
+                }
+            }
+        }
+    }
+}
